@@ -47,6 +47,7 @@ Outlet -- "/authors/delete/:id" --> deleteAuthor
 - As a user, I want to be able to sign up, log in, and log out.
 
 [Data Schema](https://drawsql.app/teams/seir-turmeric/diagrams/capstone)
+<img src="https://i.imgur.com/e9XSQFT.png"/>
 
 ### Wireframes & Mockups
 
