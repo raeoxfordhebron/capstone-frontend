@@ -53,3 +53,15 @@ Outlet -- "/authors/delete/:id" --> deleteAuthor
 <img src="https://i.imgur.com/krnqX2j.png"/>
 
 ### Daily Plan
+| Day | Goal |
+| --- | ---- |
+| 3/4 | Finish readme | 
+|     |      |
+|     |      | 
+| 3/11 | One-Day Project | 
+|     |      | 
+|     |      | 
+|     |      | 
+| 3/18 | Start Capstone Project |
+|     |      |
+|     |      |
