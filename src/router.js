@@ -1,6 +1,11 @@
-import { createBrowserRouter, createRoutesFromElements, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import App from "./App"
-import { authorShowLoader, bookShowLoader } from "./loaders";
+import { authorShowLoader, bookShowLoader, indexLoader } from "./loaders";
+import Home from "./pages/Home";
+import Book from "./components/Book";
+import Author from "./components/Author"
+import Index from "./pages/Index"
+import Show from "./pages/Show"
 
 const router = createBrowserRouter(createRoutesFromElements(
     <>
@@ -14,7 +19,8 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route path="author/create"/>
         <Route path="author/update/:id"/>
         <Route path="author/delete/:id"/>
-        <Route path="index" element={<Index/>}/>
+        <Route path="index" element={<Index/>} loader={indexLoader}/>
+        <Route path="show" element={<Show/>} loader={bookShowLoader}/>
     </Route>
     </>
 ))
