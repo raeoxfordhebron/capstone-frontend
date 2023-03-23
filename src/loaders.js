@@ -10,7 +10,9 @@ export const indexLoader = async () => {
 // Book showLoader
 export const bookShowLoader = async ({params}) => {
     const response = await fetch(url + `/books/${params.id}`)
+    console.log(response)
     const book = await response.json()
+    console.log(book)
     return book
 }
 
