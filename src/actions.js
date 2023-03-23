@@ -37,9 +37,50 @@ export const updateBookAction = async ({request, params}) => {
     return redirect(`/book/${id}`)
 }
 
-export const deleteAction = async ({params}) => {
+export const deleteBookAction = async ({params}) => {
     const id = params.id
     await fetch(url + `/book/delete/${id}`, {
+        method: "delete",
+    })
+    return redirect("/")
+}
+
+export const createAuthorAction = async ({request}) => {
+    const formData = await request.formData()
+    const newAuthor = {
+        name: formData.get("name"),
+        image: formData.get("image")
+    }
+    await fetch(url + "/author/create", {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newAuthor)
+    })
+    return redirect("/")
+}
+
+export const updateAuthorAction = async ({request, params}) => {
+    const formData = await request.formData()
+    const id = params.id
+    const updatedAuthor = {
+        name: formData.get("name"),
+        image: formData.get("image")
+    }
+    await fetch(url + `/author/update/${id}`, {
+        method: "put",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedAuthor)
+    })
+    return redirect(`/author/${id}`)
+}
+
+export const deleteAuthorAction = async ({params}) => {
+    const id = params.id
+    await fetch(url + `/author/delete/${id}`, {
         method: "delete",
     })
     return redirect("/")

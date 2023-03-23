@@ -5,15 +5,16 @@ import Home from "./pages/Home";
 import Book from "./pages/Book";
 import Author from "./pages/Author"
 import Index from "./pages/Index"
+import { createBookAction, deleteBookAction, updateBookAction } from "./actions";
 
 const router = createBrowserRouter(createRoutesFromElements(
     <>
     <Route path="/" element={<App/>}>
         <Route path="" element={<Home/>}/>
         <Route path="book/:id" element={<Book/>}loader={bookShowLoader}/>
-        <Route path="book/create"/>
-        <Route path="book/update/:id"/>
-        <Route path="book/delete/:id"/>
+        <Route path="book/create" action={createBookAction}/>
+        <Route path="book/update/:id" action={updateBookAction}/>
+        <Route path="book/delete/:id"action={deleteBookAction}/>
         <Route path="author/:id" element={<Author/>} loader={authorShowLoader}/>
         <Route path="author/create"/>
         <Route path="author/update/:id"/>
