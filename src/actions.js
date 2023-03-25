@@ -9,7 +9,7 @@ export const createBookAction = async ({request}) => {
         genre: formData.get("genre"),
         image: formData.get("image")
     }
-    await fetch(url + "/book/create", {
+    await fetch(url + "/books/create", {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -27,7 +27,7 @@ export const updateBookAction = async ({request, params}) => {
         genre: formData.get("genre"),
         image: formData.get("image")
     }
-    await fetch(url + `/book/update/${id}`, {
+    await fetch(url + `/books/${id}`, {
         method: "put",
         headers: {
             "Content-Type": "application/json"
