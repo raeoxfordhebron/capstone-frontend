@@ -7,6 +7,7 @@ const Book = () => {
             <Link to ={`/book/${book.id}`}>
                 <h1>{book.title}</h1>
             </Link>
+            
         </div>
         <div>
             <h2>Update a Book</h2>
