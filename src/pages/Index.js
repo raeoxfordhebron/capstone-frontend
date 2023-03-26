@@ -1,4 +1,8 @@
 import { useLoaderData, Form, Link } from "react-router-dom"
+import { useState } from "react"
+import BtnSlider from "../components/BtnSlider"
+import Slider from "../components/Slider"
+
 
 const Index = (props) => {
     const books = useLoaderData()
@@ -12,16 +16,7 @@ const Index = (props) => {
             <button>Submit</button>
         </Form>
     </div>
-    {books.map((book) => {
-        return (
-            <>
-            <Link to={`/book/${book.id}`}>
-            <h1>{book.title}</h1>
-            </Link>
-            <div>{book.genre}</div>
-            </>
-        )
-    })}
+<Slider books={books}/>
     </>
 }
 
