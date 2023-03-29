@@ -7,11 +7,13 @@ import Author from "./pages/Author"
 import Index from "./pages/Index"
 import { createBookAction, deleteBookAction, updateBookAction } from "./actions";
 import Authors from "./pages/Authors";
+import Create from "./pages/Create";
 
 const router = createBrowserRouter(createRoutesFromElements(
     <>
     <Route path="/" element={<App/>}>
         <Route path="" element={<Home/>}/>
+        <Route path="/create" element={<Create/>}/>
         <Route path="book/:id" element={<Book/>}loader={bookShowLoader}/>
         <Route path="book/create" action={createBookAction}/>
         <Route path="book/update/:id" action={updateBookAction}/>

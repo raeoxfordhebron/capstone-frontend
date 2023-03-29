@@ -4,10 +4,10 @@ const Book = () => {
     const book = useLoaderData()
     return (<>
         <div>
-            <Link to ={`/book/${book.id}`}>
-                <h1>{book.title}</h1>
-            </Link>
-            
+            <h1>{book.title}</h1>
+            <div>{book.genre}</div>
+            <img src={book.bookimage} alt={book.title}/>
+
         </div>
         <div>
             <h2>Update a Book</h2>

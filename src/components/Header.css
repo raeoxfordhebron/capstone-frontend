@@ -1,0 +1,30 @@
+.header-container {
+    margin: 0 auto;
+    background-color: #7DB9B6;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    color: #4D455D;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    background-color: #E96479;
+    padding: 10px;
+    width: 100px;
+    border-radius: 1px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.nav-link:visited {
+    text-decoration: none;
+}
+    
