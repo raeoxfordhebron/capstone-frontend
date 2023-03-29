@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom"
 import { DropdownContainer, MenuItems, NavLink } from "../styled-components/Dropdown"
+import { useState } from "react"
 
 const Dropdown = ({dropdown}) => {
+    const [value, setValue] = useState('book')
+    const handleChange = (event) => {
+        setValue(event.target.value)
+    }
     return (
-        <ul className={`dropdown ${dropdown ? "show" : ""}`}>
-            <li className="menu-items">
-                <NavLink to="/book/create">
-                    <span>Book</span>
-                </NavLink>
-                <NavLink to="/author/create">
-                    <span>Author</span>
-                </NavLink>
-            </li>
-        </ul> 
+        <div>
+            <label>Create</label>
+            <select value={value} onChange={handleChange}>
+                <option value="book">Book</option>
+                <option value="author">Author</option>
+            </select>
+        </div>
     )
 }
 
