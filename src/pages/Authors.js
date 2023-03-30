@@ -1,18 +1,23 @@
 import { Link, useLoaderData } from 'react-router-dom'
-import { AuthorContainer, AuthorBox, Author } from '../styled-components/Authors'
+import { AuthorContainer, Title, Author, Name, Pic, PicContainer } from '../styled-components/Authors'
+import './Authors.css'
 
 const Authors = (props) => {
     const authors = useLoaderData()
     return <>
+    <Title>Authors</Title>
     <AuthorContainer>
     {authors.map((author) => {
-        return <Author key={author.id}>
-            <Link to={`/author/${author.id}`}>
-                <h1>{author.name}</h1>
+        return <div>
+        <Author key={author.id}>
+            <Link to={`/author/${author.id}`} className="link">
+                <Name>{author.name}</Name>
             </Link>
-            <img src={author.image} alt={author.name}/>
+            <PicContainer>
+            <Pic src={author.image} alt={author.name}/>
+            </PicContainer>
         </Author>
-        
+        </div>
     })}
     </AuthorContainer>
     </>

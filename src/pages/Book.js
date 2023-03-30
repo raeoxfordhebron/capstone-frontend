@@ -1,16 +1,17 @@
 import { Link, useLoaderData, Form } from "react-router-dom"
+import { BookContainer, BookTitle, Genre } from "../styled-components/Book"
 
 const Book = () => {
     const book = useLoaderData()
     return (<>
-        <div>
-            <h1>{book.title}</h1>
-            <div>{book.genre}</div>
+        <BookContainer>
+            <BookTitle>{book.title}</BookTitle>
+            <Genre>{book.genre}</Genre>
             <img src={book.bookimage} alt={book.title}/>
 
-        </div>
+        </BookContainer>
         <div>
-            <h2>Update a Book</h2>
+            <h2>Update {book.title}</h2>
             <Form action={`/book/update/${book.id}`} method="post">
                 <input type="text" name="title" placeholder="Update Title Here" defaultValue={book.title}/>
                 <input type="text" name="genre" placeholder="Update Genre Here" defaultValue={book.genre}/>
