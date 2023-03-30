@@ -1,6 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import App from "./App"
-import { authorShowLoader, bookShowLoader, indexLoader } from "./loaders";
+import { authorShowLoader, bookShowLoader, bookIndexLoader, authorIndexLoader } from "./loaders";
 import Home from "./pages/Home";
 import Book from "./pages/Book";
 import Author from "./pages/Author"
@@ -22,8 +22,8 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route path="author/create"/>
         <Route path="author/update/:id"/>
         <Route path="author/delete/:id"/>
-        <Route path="index" element={<Index/>} loader={indexLoader}/>
-        <Route path="authors" element={<Authors/>}/>
+        <Route path="index" element={<Index/>} loader={bookIndexLoader}/>
+        <Route path="authors" element={<Authors/>} loader={authorIndexLoader}/>
     </Route>
     </>
 ))

@@ -1,10 +1,16 @@
 const url = "https://capstone-backend-072l.onrender.com"
 
 // indexLoader
-export const indexLoader = async () => {
+export const bookIndexLoader = async () => {
     const bookResponse = await fetch(url + "/books")
     const books = await bookResponse.json()
     return books
+}
+
+export const authorIndexLoader = async () => {
+    const authorResponse = await fetch(url + "/authors")
+    const authors = await authorResponse.json()
+    return authors
 }
 
 // Book showLoader
