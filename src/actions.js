@@ -39,7 +39,7 @@ export const updateBookAction = async ({request, params}) => {
 
 export const deleteBookAction = async ({params}) => {
     const id = params.id
-    await fetch(url + `/book/delete/${id}`, {
+    await fetch(url + `/books/${id}`, {
         method: "delete",
     })
     return redirect("/")

@@ -1,20 +1,35 @@
-import { Link } from "react-router-dom"
-import { DropdownContainer, MenuItems, NavLink } from "../styled-components/Dropdown"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import CreateAuthor from "./CreateAuthor"
+import CreateBook from "./CreateBook"
+import { CreateContainer, Label, CreateChoice } from "../styled-components/Dropdown"
 
 const Dropdown = ({dropdown}) => {
     const [value, setValue] = useState('book')
+
+    const [authorContent, setAuthorContent] = useState(false)
+    const [bookContent, setBookContent] = useState(false)
+
+    useEffect(() => {
+        value === "book" ? setBookContent(true) : setBookContent(false)
+        value === "author" ? setAuthorContent(true) : setAuthorContent(false)
+    }, [value])
+
     const handleChange = (event) => {
         setValue(event.target.value)
     }
-    return (
-        <div>
-            <label>Create</label>
-            <select value={value} onChange={handleChange}>
+    return (<>
+        <CreateContainer>
+            <Label>Create</Label>
+            <CreateChoice value={value} onChange={handleChange}>
                 <option value="book">Book</option>
                 <option value="author">Author</option>
-            </select>
+            </CreateChoice>
+        </CreateContainer>
+        <div>
+            {authorContent && <CreateAuthor/>}
+            {bookContent && <CreateBook/>}
         </div>
+        </>
     )
 }
 
