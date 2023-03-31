@@ -1,0 +1,46 @@
+
+
+.update-button-container{
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.update-button {
+    height: 2.5rem;
+    background-color: #E96479;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    width: 100px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.update-container-open {
+    background-color: #7DB9B6;
+    padding: 15px;
+    text-align: center;
+    margin: 10px auto;
+    width: 60%;
+    visibility: visible;
+}
+
+.update-container-closed {
+    visibility: hidden;
+}
+
+.update-input {
+    margin: 4px;
+}
+
+.submit-button {
+    height: 2.5rem;
+    background-color: #E96479;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+}

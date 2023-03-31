@@ -18,27 +18,12 @@ padding: 10px;
 export const Genre = styled.div`
 text-align: center;
 `
-
-export const UpdateContainer = styled.div`
-background-color: ${theme.color4};
-padding: 15px;
-text-align: center;
-margin: 10px auto;
-width: 60%;
-
-`
-
-export const Update = styled.input`
-margin: 4px;
-`
-
 export const Delete = styled.button`
 height: 2.5rem;
 background-color: ${theme.color2};
 color: white;
 font-family: 'Lato', sans-serif;
 width: 100px;
-margin: 10px;
 cursor: pointer;
 justify-content: center;
 `
@@ -66,13 +51,3 @@ display: flex;
 justify-content: center;
 `
 
-export const SubmitButton = styled.button`
-height: 2.5rem;
-background-color: ${theme.color2};
-color: white;
-font-family: 'Lato', sans-serif;
-width: 100px;
-margin: 10px;
-cursor: pointer;
-text-align: center;
-`

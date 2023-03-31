@@ -1,5 +1,6 @@
 import { Link, useLoaderData, Form } from "react-router-dom"
-import { BookContainer, BookTitle, Genre, UpdateContainer, Update, Delete, GoBack, DeleteContainer, GoBackContainer, SubmitButton } from "../styled-components/Book"
+import { BookContainer, BookTitle, Genre, Delete, GoBack, DeleteContainer, GoBackContainer } from "../styled-components/Book"
+import { Button } from "../components/Update"
 
 const Book = () => {
     const book = useLoaderData()
@@ -15,16 +16,7 @@ const Book = () => {
                 <Delete>Delete Book</Delete>
             </Form>
         </DeleteContainer>
-        <UpdateContainer>
-            <h2>Update {book.title}</h2>
-            <Form action={`/book/update/${book.id}`} method="post">
-                <Update type="text" name="title" placeholder="Update Title Here" defaultValue={book.title}/>
-                <Update type="text" name="genre" placeholder="Update Genre Here" defaultValue={book.genre}/>
-                <Update type="text" name="image" placeholder="Update Image Here"/>
-                <SubmitButton>Submit</SubmitButton>
-            </Form>
-        </UpdateContainer>
-    
+        <Button/>
         <GoBackContainer>
         <Link to="/">
             <GoBack>Go Back</GoBack>
