@@ -1,5 +1,5 @@
 import { Link, useLoaderData, Form } from "react-router-dom"
-import { BookContainer, BookTitle, Genre } from "../styled-components/Book"
+import { BookContainer, BookTitle, Genre, UpdateContainer, Update, Delete, GoBack, DeleteContainer, GoBackContainer, SubmitButton } from "../styled-components/Book"
 
 const Book = () => {
     const book = useLoaderData()
@@ -10,21 +10,26 @@ const Book = () => {
             <img src={book.bookimage} alt={book.title}/>
 
         </BookContainer>
-        <div>
+        <DeleteContainer>
+        <Form action={`/book/delete/${book.id}`} method="post">
+                <Delete>Delete Book</Delete>
+            </Form>
+        </DeleteContainer>
+        <UpdateContainer>
             <h2>Update {book.title}</h2>
             <Form action={`/book/update/${book.id}`} method="post">
-                <input type="text" name="title" placeholder="Update Title Here" defaultValue={book.title}/>
-                <input type="text" name="genre" placeholder="Update Genre Here" defaultValue={book.genre}/>
-                <input type="text" name="image" placeholder="Update Image Here"/>
-                <button>Submit</button>
+                <Update type="text" name="title" placeholder="Update Title Here" defaultValue={book.title}/>
+                <Update type="text" name="genre" placeholder="Update Genre Here" defaultValue={book.genre}/>
+                <Update type="text" name="image" placeholder="Update Image Here"/>
+                <SubmitButton>Submit</SubmitButton>
             </Form>
-            <Form action={`/book/delete/${book.id}`} method="post">
-                <button>Delete Book</button>
-            </Form>
-        </div>
+        </UpdateContainer>
+    
+        <GoBackContainer>
         <Link to="/">
-            <button>Go Back</button>
+            <GoBack>Go Back</GoBack>
         </Link>
+        </GoBackContainer>
         </>
     )
 }
