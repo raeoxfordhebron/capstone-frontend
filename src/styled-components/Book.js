@@ -8,6 +8,11 @@ padding: 30px;
 margin: 50px auto;
 color: white;
 border-radius: 2px;
+text-align: center;
+`
+export const BookImage = styled.img`
+width: 50%;
+margin: 50px;
 `
 
 export const BookTitle = styled.h1`
@@ -17,6 +22,7 @@ padding: 10px;
 `
 export const Genre = styled.div`
 text-align: center;
+margin: 10px 0 0 0;
 `
 export const Delete = styled.button`
 height: 2.5rem;

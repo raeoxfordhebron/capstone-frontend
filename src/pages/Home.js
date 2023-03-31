@@ -1,21 +1,23 @@
 import { Form } from "react-router-dom"
+import "./Home.css"
 
 const Home = (props) => {
     return <>
-    <div>
-        <h1>Sign Up</h1>
-        <Form>
+    <h1 className="title">Sign Up</h1>
+    <div className="sign-up-container">
+        <Form className="card">
             <label>
                 Email: <input type="text" name="email"/>
             </label>
             <label>
                 Password: <input type="password" name="password"/>
             </label>
-            <button>Submit</button>
+            <button className="button">Submit</button>
         </Form>
     </div>
-        <div>
-        <h1>Log In</h1>
+        <h1 className="title">Log In</h1>
+        <div className="log-in-container">
+        <div className="card">
         <Form>
             <label>
                 Email: <input type="text" name="email" required/>
@@ -23,8 +25,9 @@ const Home = (props) => {
             <label>
                 Password: <input type="password" name="password" required/>
             </label>
-            <button>Submit</button>
+            <button className="button">Submit</button>
         </Form>
+        </div>
     </div>
     </>
 }

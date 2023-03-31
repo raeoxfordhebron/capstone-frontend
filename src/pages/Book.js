@@ -1,5 +1,5 @@
 import { Link, useLoaderData, Form } from "react-router-dom"
-import { BookContainer, BookTitle, Genre, Delete, GoBack, DeleteContainer, GoBackContainer } from "../styled-components/Book"
+import { BookContainer, BookImage, BookTitle, Genre, Delete, GoBack, DeleteContainer, GoBackContainer } from "../styled-components/Book"
 import { Button } from "../components/Update"
 
 const Book = () => {
@@ -8,7 +8,7 @@ const Book = () => {
         <BookContainer>
             <BookTitle>{book.title}</BookTitle>
             <Genre>{book.genre}</Genre>
-            <img src={book.bookimage} alt={book.title}/>
+            <BookImage src={book.image} alt={book.title}/>
 
         </BookContainer>
         <DeleteContainer>
@@ -18,7 +18,7 @@ const Book = () => {
         </DeleteContainer>
         <Button/>
         <GoBackContainer>
-        <Link to="/">
+        <Link to="/index">
             <GoBack>Go Back</GoBack>
         </Link>
         </GoBackContainer>
