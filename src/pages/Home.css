@@ -3,6 +3,7 @@
     justify-content: center;
     width: 100%;
     margin: 0 0 30px 0;
+    text-align: center;
 }
 
 .log-in-container {
@@ -24,10 +25,12 @@
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
     width: 20%;
     justify-content: center;
     border-radius: 2px;
     min-width: 200px;
+    max-width: 250px;
 }
 
 .button {
