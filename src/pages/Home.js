@@ -17,8 +17,7 @@ const Home = (props) => {
     </div>
         <h1 className="title">Log In</h1>
         <div className="log-in-container">
-        <div className="card">
-        <Form>
+        <Form className="card">
             <label>
                 Email: <input className="user-input" type="text" name="email" required/>
             </label>
@@ -28,7 +27,6 @@ const Home = (props) => {
             <button className="button">Submit</button>
         </Form>
         </div>
-    </div>
     </>
 }
 
