@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import CreateAuthor from "./CreateAuthor"
 import CreateBook from "./CreateBook"
-import { CreateContainer, Label, CreateChoice } from "../styled-components/Dropdown"
+import { CreateContainer, Label, FormContent, CreateChoice } from "../styled-components/Dropdown"
 
 const Dropdown = ({dropdown}) => {
     const [value, setValue] = useState('book')
@@ -25,10 +25,10 @@ const Dropdown = ({dropdown}) => {
                 <option value="author">Author</option>
             </CreateChoice>
         </CreateContainer>
-        <div>
+        <FormContent>
             {authorContent && <CreateAuthor/>}
             {bookContent && <CreateBook/>}
-        </div>
+        </FormContent>
         </>
     )
 }

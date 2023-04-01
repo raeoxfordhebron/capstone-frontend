@@ -10,6 +10,7 @@
 
 .nav-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -22,6 +23,7 @@
     border-radius: 1px;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     cursor: pointer;
+    margin: 3px;
 }
 
 .nav-link:visited {

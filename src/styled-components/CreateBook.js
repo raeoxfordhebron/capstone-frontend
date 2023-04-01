@@ -6,6 +6,8 @@ margin: 0 auto;
 display: flex;
 justify-content: center;
 align-items: center;
+background-color: ${theme.color1};
+text-align: center;
 `
 
 export const CreateInput = styled.input`
@@ -22,4 +24,5 @@ font-family: 'Lato', sans-serif;
 width: 100px;
 margin: 10px;
 cursor: pointer;
+
 `

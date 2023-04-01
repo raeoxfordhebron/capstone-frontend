@@ -17,3 +17,9 @@ export const CreateChoice = styled.select`
 margin: 0 auto;
 text-align: center;
 `
+
+export const FormContent = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`

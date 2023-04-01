@@ -1,16 +1,20 @@
 .sign-up-container {
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin: 0 0 30px 0;
 }
 
 .log-in-container {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .title {
     text-align: center;
     font-size: 1.7rem;
+    margin: 10px;
 }
 
 .card {
@@ -23,6 +27,7 @@
     width: 20%;
     justify-content: center;
     border-radius: 2px;
+    min-width: 200px;
 }
 
 .button {
