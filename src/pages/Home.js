@@ -20,10 +20,10 @@ const Home = (props) => {
         <div className="card">
         <Form>
             <label>
-                Email: <input type="text" name="email" required/>
+                Email: <input className="user-input" type="text" name="email" required/>
             </label>
             <label>
-                Password: <input type="password" name="password" required/>
+                Password: <input className="user-input" type="password" name="password" required/>
             </label>
             <button className="button">Submit</button>
         </Form>
