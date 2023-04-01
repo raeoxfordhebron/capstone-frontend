@@ -6,6 +6,8 @@ margin: 0 auto;
 display: flex;
 justify-content: center;
 align-items: center;
+background-color: ${theme.color1};
+text-align: center;
 `
 
 export const CreateInput = styled.input`

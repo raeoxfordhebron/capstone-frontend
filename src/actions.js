@@ -51,7 +51,7 @@ export const createAuthorAction = async ({request}) => {
         name: formData.get("name"),
         image: formData.get("image")
     }
-    await fetch(url + "/author/create", {
+    await fetch(url + "/authors/create", {
         method: "post",
         headers: {
             "Content-Type": "application/json"
